@@ -17,6 +17,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\Clients\HomeController;
+use App\Http\Controllers\Clients\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\VehicleTypeController;
@@ -40,7 +41,10 @@ Route::get('/', function () {
     return view('layouts.app');
 });
 Route::prefix('client')->group(function (){
-    Route::get('/', [\App\Http\Controllers\Clients\HomeController::class, 'index'])->name('home');
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+    
+    Route::get('/login', [LoginController::class, 'login'])->name('login-client');
+    Route::post('/login', [LoginController::class, 'postLogin']);
 });
 Route::prefix('user-manager')->group(function (){
     Route::get('/', [\App\Http\Controllers\UserController::class, 'getUser'])->name('index');

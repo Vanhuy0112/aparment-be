@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="{{asset('assets/css/clients/templatemo-edu-meeting.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/clients/owl.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/clients/lightbox.css')}}" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
 </head>
 
 <body>
